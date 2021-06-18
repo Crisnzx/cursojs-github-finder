@@ -1,13 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./style.css">
    <title>GitHub Finder</title>
 </head>
+
 <body>
-   
+   <nav>
+      <div class="container navbar">
+         <a href="#">GitHub Finder</a>
+      </div>
+   </nav>
+   <main class="container c-search">
+      <div id="search">
+         <h1>Search GitHub Users</h1>
+         <p>Enter a username to fetch a users profile info and repos</p>
+         <input type="text" id="username" placeholder="GitHub Username">
+      </div>
+      <div id="everything">
+         <div id="profile" class="off">
+            <div id="img">
+               <img src="https://github.com/Crisnzx.png" alt="foto">
+               <a href="https://github.com/Crisnzx" class="button">View Profile</a>
+            </div>
+            <div id="info">
+               <div>
+                  <div class="top-info c1">
+                     <p class="content">Public Repos: 14</p>
+                  </div>
+                  <div class="top-info c2">
+                     <p class="content">Public Gists: 14</p>
+                  </div>
+                  <div class="top-info c3">
+                     <p class="content">Followers: 14</p>
+                  </div>
+                  <div class="top-info c4">
+                     <p class="content">Following: 14</p>
+                  </div>
+               </div>
+               <div id="list">
+                  <ul>
+                     <li>Company: null</li>
+                     <li>Website/Blog: https://google.com</li>
+                     <li>Location: Esperança, PB</li>
+                     <li>Member Since: 2018</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div id="alert" class="off"><p> User not found</p></div>
+      </div>
+   </main>
+   <footer>
+      <p>GitHub Finder &copy;</p>
+   </footer>
+
+
+   <script src="./github.js"></script>
+   <script src="./ui.js"></script>
    <script src="./app.js"></script>
 </body>
+
 </html>

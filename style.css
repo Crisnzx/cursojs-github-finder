@@ -1,0 +1,222 @@
+:root {
+   /* Dracula theme */
+   --dark-color: #282a36;
+   --medium-color: #6272a4;
+   --light-color: #f8f8f2;
+   --green-color: #50fa7b;
+   --pink-color: #ff79c6;
+   --purple-color: #bd93f9;
+
+}
+
+/* MAIN STYLING */
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: sans-serif;
+   background-color: var(--medium-color);
+   color: white;
+}
+
+a {
+   text-decoration: none;
+   color: white;
+   font-size: 1.7rem;
+   /* display: block; */
+   
+}
+
+h1 {
+   margin-bottom: 1.5rem;
+}
+
+nav {
+   height: 70px;
+   background-color: var(--dark-color);
+   
+}
+
+ul {
+   list-style: none;
+}
+
+.container {
+   width: min(90vw,1000px);
+   margin: 0 auto;
+   padding: 0 2rem;
+}
+
+.container.navbar {
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+}
+
+/* UTILITY */
+
+.button {
+   background-color: var(--dark-color);
+   font-size: 22px;
+   display: inline-block;
+   padding: 0.5rem 2rem;
+   border-radius: 15px;
+   color: var(--green-color);
+   transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+   background-color: black;
+   
+}
+
+.top-info {
+   background-color: var(--dark-color);
+   border-radius: 20px;
+   font-weight: bold;
+}
+
+.c1 { color: var(--green-color); }
+.c2 { color: var(--light-color); }
+.c3 { color: var(--pink-color); }
+.c4 { color: var(--purple-color); }
+
+
+
+.top-info .content {
+   margin-bottom: 0 !important;
+   padding: 0.5rem 1rem;
+   
+}
+
+/* SEARCH */
+
+.container.c-search {
+   color: black;
+   margin-top: 2rem;
+   background-color: var(--light-color);
+   padding: 1.5rem 2rem;
+   border-radius: 10px;
+   margin-bottom: 2rem;
+   height: 530px;
+}
+
+.container.c-search p {
+   opacity: 0.8;
+   margin-bottom: 0.5rem;
+}
+
+.container.c-search input {
+   padding: 10px 15px;
+}
+
+.container.c-search #search {
+   padding-bottom: 1.5rem;
+   margin-bottom: 1.5rem;
+   border-bottom: 1px solid black;
+}
+
+
+/* PROFILE */
+
+/* FLEXBOX */
+
+#profile {
+   display: flex;
+}
+
+#profile #img {
+   flex: 3;
+   margin-right: 2rem;
+   /* background-color: red; */
+}
+
+#profile #info {
+   flex: 8;
+}
+
+#profile #img img {
+   display: block;
+   width: 100%;
+   border-radius: 15%;
+}
+
+#profile #img a {
+   width: 100%;
+   text-align: center;
+   margin-top: 1rem;
+}
+
+
+#profile #info > div:first-child {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 1rem;
+}
+
+#profile #info #list {
+   /* background-color: red; */
+   height: 175px;
+}
+
+#profile #info #list ul li {
+   border: 1px solid black;
+   border-bottom: none;
+   padding: 12px;
+}
+
+#profile #info #list ul li:last-child {
+   border-bottom: 1px solid black;
+}
+
+/* ALERT */
+
+#alert {
+   background-color: red;
+   color: white;
+   font-weight: bold;
+   font-size: 1.3rem;
+   border: 5px solid darkred;
+   border-radius: 10px;
+   height: 70px;
+   align-items: center;
+   justify-content: center;
+   
+}
+
+#alert p {
+   text-align: center;
+   /* background-color: blue; */
+   margin-bottom: 0;
+}
+
+/* EVERYTHING */
+
+#everything #profile.on,
+#everything #alert.on {
+   display: flex;
+}
+
+
+#everything #profile.off,
+#everything #alert.off {
+   display: none;
+}
+
+footer {
+   /* height: 70px; */
+   border-top: 1px solid var(--green-color);
+   border-bottom: 1px solid var(--green-color);
+   background-color: var(--dark-color);
+}
+
+footer p {
+   color: var(--green-color);
+   text-align: center;
+   padding: 1.5rem 0;
+}
