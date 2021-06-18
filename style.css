@@ -31,7 +31,7 @@ a {
    
 }
 
-h1 {
+h1, h2 {
    margin-bottom: 1.5rem;
 }
 
@@ -78,7 +78,8 @@ ul {
 .top-info {
    background-color: var(--dark-color);
    border-radius: 20px;
-   font-weight: bold;
+   text-align: center;
+
 }
 
 .c1 { color: var(--green-color); }
@@ -103,7 +104,7 @@ ul {
    padding: 1.5rem 2rem;
    border-radius: 10px;
    margin-bottom: 2rem;
-   height: 530px;
+   /* height: 530px; */
 }
 
 .container.c-search p {
@@ -113,6 +114,19 @@ ul {
 
 .container.c-search input {
    padding: 10px 15px;
+}
+
+.container.c-search input[type="submit"] {
+   margin-left: 2rem;
+   background-color: var(--dark-color);
+   color: var(--green-color);
+   font-weight: bold;
+   border: none;
+   cursor: pointer;
+}
+
+.container.c-search input[type="submit"]:hover {
+   opacity: 0.8;
 }
 
 .container.c-search #search {
@@ -128,6 +142,9 @@ ul {
 
 #profile {
    display: flex;
+   padding-bottom: 1.5rem;
+   margin-bottom: 1.5rem;
+   border-bottom: 1px solid black;
 }
 
 #profile #img {
@@ -159,18 +176,18 @@ ul {
    margin-bottom: 1rem;
 }
 
-#profile #info #list {
+.list {
    /* background-color: red; */
    height: 175px;
 }
 
-#profile #info #list ul li {
+.list ul li {
    border: 1px solid black;
    border-bottom: none;
    padding: 12px;
 }
 
-#profile #info #list ul li:last-child {
+.list ul li:last-child {
    border-bottom: 1px solid black;
 }
 
@@ -195,15 +212,43 @@ ul {
    margin-bottom: 0;
 }
 
+/* REPOSITORIES */
+
+#repositories .list.list-repos {
+   height: auto;
+   
+}
+
+#repositories .list.list-repos ul li {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+#repositories .list.list-repos ul li > div {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 3rem;
+   
+}
+
+#repositories a {
+   color: blue;
+   font-size: 1rem;
+}
+
 /* EVERYTHING */
 
-#everything #profile.on,
+#everything #user.on {
+   display: block;
+}
+
 #everything #alert.on {
    display: flex;
 }
 
 
-#everything #profile.off,
+#everything #user.off,
 #everything #alert.off {
    display: none;
 }

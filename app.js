@@ -1,34 +1,35 @@
 const github = new Github();
-const ui = new UI();
 
 const userNameUI = document.querySelector('#username');
+const submitUI = document.querySelector('input[type="submit"]');
 const everythingUI = document.querySelector('#everything');
 
-const alertUI = document.querySelector('#alert');
+
 
 let userName;
 
-userNameUI.addEventListener('keyup', (e) => {
+submitUI.addEventListener('click', (e) => {
    userName = userNameUI.value;
    if(userName !== '') {
 
       github.getUser(userName)
          .then(data => {
             if(data.profile.message !== 'Not Found'){
-               // Show profile
+               // Show profile and repositories
                UI.displayProfile(data.profile);
+               UI.displayRepos(data.repos);
                alertUI.className = 'off';
-               profileUI.className = 'on';
+               userUI.className = 'on';
             } else {
                // Show alert
                alertUI.className = 'on';
-               profileUI.className = 'off';
+               userUI.className = 'off';
             }
          })
-      profileUI.className = 'on';
       
    } else {
-      UI.hideAll(profileUI, alertUI);
+      UI.hideAll(userUI, alertUI);
 
    }
+   e.preventDefault();
 });
